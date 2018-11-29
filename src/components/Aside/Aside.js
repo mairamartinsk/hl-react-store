@@ -5,7 +5,7 @@ class Aside extends Component {
   render() {
     return (
       <aside className="aside">
-        <CartButton />
+        <CartButton showModal={this.props.showModal} />
       </aside>
     );
   }
