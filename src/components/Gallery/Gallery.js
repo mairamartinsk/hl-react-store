@@ -2,17 +2,23 @@ import React, { Component } from "react";
 import Product from "./../Product/Product";
 
 class Gallery extends Component {
-  /* Get state from App, generate number of products to display */
   render() {
+    const { image, items } = this.props;
+
+    const renderProducts = () => {
+      let productsArray = [];
+      for (let i = 0; i < items; i++) {
+        productsArray.push(<Product key={i} image={image} />);
+      }
+
+      return productsArray;
+    };
+
     return (
       <div className="container">
         <main>
           Products:
-          <ul>
-            <Product />
-            <Product />
-            <Product />
-          </ul>
+          <ul className="gallery-grid">{renderProducts()}</ul>
         </main>
       </div>
     );
