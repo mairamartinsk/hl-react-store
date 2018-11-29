@@ -11,7 +11,8 @@ class App extends Component {
   state = {
     imagesToDisplay: 6,
     imagePlaceholder: "https://source.unsplash.com/collection/3360193/400x400",
-    displayModal: false
+    displayModal: false,
+    cartItems: 0
   };
 
   showModal = () => {
@@ -22,16 +23,37 @@ class App extends Component {
     this.setState({ displayModal: false });
   };
 
+  addToCart = () => {
+    this.setState(state => {
+      return { cartItems: state.cartItems + 1 };
+    });
+  };
+
+  removeFromCart = () => {
+    this.setState(state => {
+      return { cartItems: state.cartItems - 1 };
+    });
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Modal hideModal={this.hideModal} showModal={this.state.displayModal} />
+        {this.state.displayModal && (
+          <Modal
+            hideModal={this.hideModal}
+            cartItems={this.state.cartItems}
+            addToCart={this.addToCart}
+            removeFromCart={this.removeFromCart}
+          />
+        )}
         <Gallery
           image={this.state.imagePlaceholder}
           items={this.state.imagesToDisplay}
+          cartItems={this.state.cartItems}
+          addToCart={this.addToCart}
         />
-        <Aside showModal={this.showModal} />
+        <Aside showModal={this.showModal} cartItems={this.state.cartItems} />
       </div>
     );
   }

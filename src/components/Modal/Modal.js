@@ -10,6 +10,8 @@ class Modal extends Component {
       <div className={classes}>
         <button onClick={this.props.hideModal}>close</button>
         <p>Modal!!!</p>
+        <button onClick={this.props.addToCart}>add to cart</button>
+        <button onClick={this.props.removeFromCart}>remove from cart</button>
       </div>
     );
   }
