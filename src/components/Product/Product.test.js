@@ -3,9 +3,9 @@ import { shallow } from "enzyme";
 import Product from "./Product";
 
 describe("Product Component", () => {
-  it("should render an LI tag", () => {
+  it("renders an image", () => {
     const wrapper = shallow(<Product />);
-    const LI = <li className="product">Product</li>;
-    expect(wrapper.contains(LI)).toBe(true);
+    const image = wrapper.find("product-image");
+    expect(image.length).toEqual(0);
   });
 });
