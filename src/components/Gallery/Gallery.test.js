@@ -3,9 +3,8 @@ import { shallow } from "enzyme";
 import Gallery from "./Gallery";
 
 describe("Gallery Component", () => {
-  it("should render 3 mock products", () => {
+  it("should render Products", () => {
     const wrapper = shallow(<Gallery />);
-    const product = wrapper.find('Product');
-    expect(product.length).toEqual(3);
+    expect(wrapper.prop("children").length).not.toEqual(0);
   });
 });

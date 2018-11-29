@@ -15,12 +15,10 @@ class Gallery extends Component {
     };
 
     return (
-      <div className="container">
-        <main>
-          Products:
-          <ul className="gallery-grid">{renderProducts()}</ul>
-        </main>
-      </div>
+      <main className="container">
+        Products:
+        <ul className="gallery-grid">{renderProducts()}</ul>
+      </main>
     );
   }
 }
