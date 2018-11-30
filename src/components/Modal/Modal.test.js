@@ -5,7 +5,7 @@ import Modal from "./Modal";
 describe("Modal Component", () => {
   it("contains a title", () => {
     const wrapper = shallow(<Modal />);
-    const text = <p>Modal!!!</p>;
+    const text = <h3>Your Shopping Cart</h3>;
     expect(wrapper.contains(text)).toBe(true);
   });
 });

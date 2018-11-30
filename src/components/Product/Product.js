@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "./../Button/Button";
+
 import IconPlus from "./plus-square.svg";
 
 class Product extends Component {
@@ -13,6 +15,7 @@ class Product extends Component {
   hideButton = () => {
     this.setState({ isHover: false });
   };
+
   render() {
     return (
       <li
@@ -26,12 +29,12 @@ class Product extends Component {
           alt="Courtesy of Unsplash"
         />
         {this.state.isHover && (
-          <button onClick={this.props.addToCart} className="add-to-cart">
-            <span>
-              <img src={IconPlus} aria-hidden="true" />
-            </span>{" "}
-            Add To Cart
-          </button>
+          <Button
+            onClick={this.props.addToCart}
+            className="button primary add-to-cart"
+            text="Add To Cart"
+            icon={IconPlus}
+          />
         )}
       </li>
     );
