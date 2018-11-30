@@ -5,21 +5,23 @@ class Gallery extends Component {
   render() {
     const { image, items, addToCart } = this.props;
 
-    const renderProducts = () => {
+    function renderProducts(callback) {
       let productsArray = [];
+
       for (let i = 0; i < items; i++) {
         productsArray.push(
-          <Product key={i} image={image} addToCart={addToCart} />
+          <Product key={i} image={image} addToCart={callback} />
         );
       }
 
       return productsArray;
-    };
+    }
 
     return (
       <main className="container">
         Products:
-        <ul className="gallery-grid">{renderProducts()}</ul>
+        <button onClick={addToCart}>Test</button>
+        <ul className="gallery-grid">{renderProducts(addToCart)}</ul>
       </main>
     );
   }

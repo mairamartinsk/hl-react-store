@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import AddToCartButton from "./../AddToCartButton/AddToCartButton";
 
 class Product extends Component {
   state = {
@@ -26,7 +25,9 @@ class Product extends Component {
           alt="Courtesy of Unsplash"
         />
         {this.state.isHover && (
-          <AddToCartButton addToCard={this.props.addToCard} />
+          <button onClick={this.props.addToCart} className="add-to-cart">
+            + Add To Cart
+          </button>
         )}
       </li>
     );
