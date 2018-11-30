@@ -1,0 +1,40 @@
+.products-cart {
+  margin: 1em 0;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr 25% 25%;
+  border-bottom: 1px solid #000;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-gap: 1em;
+}
+
+.product-details {
+  position: relative;
+}
+
+.change-order {
+  position: absolute;
+  bottom: 0;
+  color: #aaa;
+}
+
+.price {
+  text-align: right;
+}
+
+.quantity {
+  text-align: center;
+}
+
+.solid {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-top;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #000;
+}
