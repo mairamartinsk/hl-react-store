@@ -60,7 +60,7 @@ class Modal extends Component {
           </div>
 
           <div className="discount">
-            <p>
+            <p className="highlight">
               10% discount on your order{" "}
               <span className="align-right">-500 SEK</span>
             </p>
@@ -70,7 +70,7 @@ class Modal extends Component {
           </div>
 
           <div className="modal-total align-right">
-            <p>Discount -500 SEK</p>
+            <p className="highlight">Discount -500 SEK</p>
             <p>Order Total {this.props.cartTotal - 500} SEK</p>
           </div>
 

@@ -1,8 +1,9 @@
 .product {
   position: relative;
+  justify-self: center;
 }
 
-.add-to-cart {
+.button.add-to-cart {
   position: absolute;
   top: 50%;
   left: 50%;

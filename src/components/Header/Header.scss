@@ -9,3 +9,11 @@
   background-color: #000;
   color: #fff;
 }
+
+.site-title {
+  font-size: 1.8em;
+
+  & span {
+    font-weight: 300;
+  }
+}

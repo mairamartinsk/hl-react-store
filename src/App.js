@@ -39,7 +39,7 @@ class App extends Component {
 
   updateCartTotal = () => {
     this.setState(state => {
-      return { cartTotal: state.cartItems * 25 };
+      return { cartTotal: state.cartItems * 1750 };
     });
   };
 
@@ -51,8 +51,10 @@ class App extends Component {
           isModal={this.state.isModal}
           hideModal={this.hideModal}
           cartItems={this.state.cartItems}
+          cartTotal={this.state.cartTotal}
           addToCart={this.addToCart}
           removeFromCart={this.removeFromCart}
+          image={this.state.imagePlaceholder}
         />
         <Gallery
           image={this.state.imagePlaceholder}
