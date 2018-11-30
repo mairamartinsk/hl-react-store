@@ -19,8 +19,7 @@ class Gallery extends Component {
 
     return (
       <main className="container">
-        Products:
-        <button onClick={addToCart}>Test</button>
+        <h3>Shop Our Products</h3>
         <ul className="gallery-grid">{renderProducts(addToCart)}</ul>
       </main>
     );

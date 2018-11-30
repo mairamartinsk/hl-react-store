@@ -1,11 +1,11 @@
 .header {
   min-height: 50px;
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   background-color: #000;
   color: #fff;
-}
-
-@media screen and (min-width: 800px) {
-  .header {
-    grid-area: 1 / 1 / 2 / 3;
-  }
 }

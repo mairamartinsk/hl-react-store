@@ -5,7 +5,6 @@ import "./App.scss";
 import Modal from "./components/Modal/Modal";
 import Header from "./components/Header/Header";
 import Gallery from "./components/Gallery/Gallery";
-import Aside from "./components/Aside/Aside";
 
 class App extends Component {
   state = {
@@ -47,7 +46,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header showModal={this.showModal} />
         <Modal
           isModal={this.state.isModal}
           hideModal={this.hideModal}
@@ -61,7 +60,6 @@ class App extends Component {
           cartItems={this.state.cartItems}
           addToCart={this.addToCart.bind(this)}
         />
-        <Aside showModal={this.showModal} cartItems={this.state.cartItems} />
       </div>
     );
   }

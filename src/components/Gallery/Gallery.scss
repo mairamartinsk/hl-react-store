@@ -15,16 +15,7 @@
 }
 
 @media screen and (min-width: 800px) {
-  .container {
-    grid-area: 2 / 1 / 3 / 2;
-  }
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media screen and (max-width: 799px) {
-  .container {
-    margin-bottom: 4em;
   }
 }
