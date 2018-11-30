@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import IconPlus from "./plus-square.svg";
 
 class Product extends Component {
   state = {
@@ -26,7 +27,10 @@ class Product extends Component {
         />
         {this.state.isHover && (
           <button onClick={this.props.addToCart} className="add-to-cart">
-            + Add To Cart
+            <span>
+              <img src={IconPlus} aria-hidden="true" />
+            </span>{" "}
+            Add To Cart
           </button>
         )}
       </li>
